@@ -107,7 +107,6 @@ module Letsrate
   end
 
 end
-
-module Mongoid
+module Letsrate::Mongoid::Document
   include Letsrate
 end
