@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
-require 'rails/generators/active_record'
-class LetsrateGenerator < ActiveRecord::Generators::Base
+require 'rails/generators/mongoid'
+class LetsrateGenerator < Monoid::Generators::Document
   include Rails::Generators::Migration
 
   source_root File.expand_path('../templates', __FILE__)
