@@ -1,7 +1,6 @@
 require 'rails/generators/migration'
 require 'rails/generators/mongoid'
-class LetsrateGenerator < Monoid::Generators::Document
-  include Rails::Generators::Migration
+class LetsrateGenerator
 
   source_root File.expand_path('../templates', __FILE__)
 
@@ -26,15 +25,5 @@ class LetsrateGenerator < Monoid::Generators::Document
 
   def add_rate_path_to_route
     route "post '/rate' => 'rater#create', :as => 'rate'"
-  end
-
-  desc "cacheable rating average migration is creating ..."
-  def create_cacheable_migration
-    migration_template "cache_migration.rb", "db/migrate/create_rating_caches.rb"
-  end
-
-  desc "migration is creating ..."
-  def create_migration
-    migration_template "migration.rb", "db/migrate/create_rates.rb"
   end
 end
