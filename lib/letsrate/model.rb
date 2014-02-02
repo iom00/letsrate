@@ -108,6 +108,6 @@ module Letsrate
 
 end
 
-class ActiveRecord::Base
+class Mongoid::Document
   include Letsrate
 end
