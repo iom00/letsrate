@@ -108,6 +108,6 @@ module Letsrate
 
 end
 
-class Mongoid::Document
+module Mongoid
   include Letsrate
 end
